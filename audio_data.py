@@ -140,7 +140,7 @@ def quantize_data(data, classes):
 def list_all_audio_files(location):
     audio_files = []
     for dirpath, dirnames, filenames in os.walk(location):
-        for filename in [f for f in filenames if f.endswith((".mp3", ".wav", ".aif", "aiff"))]:
+        for filename in [f for f in filenames if f.endswith((".mp3", ".wav", ".aif", "aiff", "m4a",".m4a"))]:
             audio_files.append(os.path.join(dirpath, filename))
 
     if len(audio_files) == 0:
